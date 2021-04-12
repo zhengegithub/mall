@@ -1,0 +1,25 @@
+@font-face {font-family: "iconfont";
+  src: url('iconfont.eot?t=1617947837804'); /* IE9 */
+  src: url('iconfont.eot?t=1617947837804#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAAPkAAsAAAAACBAAAAOXAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCDBgqDcIMxATYCJAMMCwgABCAFhG0HPhv/BhHVm93IfiTGtg62Js7EsqzRKXDMWaHKqmii8SaCao3s2d27R1L/ClACB9AiqiggoYlUdISLUKkIA2RBAcvY3NamXUNWmKjKXxLb5af/hzzscCF0DOihqemgkPXxgrDZ57mc3nx+YHfVtyyXMZftpfeiABMMdC+LtnABYsINYxe0xNME2o2ZF7s09UGgVWFOCsQFDzcHoDXjURq40GqvK1YW8VilNd1JL008Cr4fv7nAJqkyc+a+8xrOwLZvv68BLb6Jd8ojaKcLga0jYx6FOFMZOSZHuXlZu2opzdW1IqSpkv//E2g0W73RH14iaqalE7LT5nRRWkdO8J1ZDa2uP0rNGzwFeIMcg0PflaameHgcWjlbe+kQuLORrmqOC0H6sgQgqGWGpoYfhCqq2YubM1spYbA5KpMaBIuLyysoIF/p7liSRYVAJVQlZVRlVShHkDLa0lJKGAahiEzOlnncu7Odg9NZqGi2aiprgoZzDfXcnf3c7Y5QCd69kYEkpdK1Ump8a2YzOeilLp7D1FL/DzGK1xsxCXCyb+SmkcazRys7rnCYzz659SKzK6zBwqFPPwtyWTaofyuthdNrsg7bjVkZ4n9YIG9y2TmZO+sj5gprrOY7pA0MCyYN3vbY8jCrNy5UDwbxpr801s1p8/4NOOF23SG9Asw+H0rPPc8DT11q5kIHMT2+8/YasV0v4F7h0u2sx97G39Wncfe9u+mh4s8RtfY63gs9UfskttWTyyU4nTc9Cabjfx9sC4dkUXj+1//g8zuV4aPi0/U9+cHvlMYLhw22Cr7TpggQ4F4HzoFmMy9k0eZfU1iqfOGPXuarHkOsHdHGP+x9AR9LCZ4Hhm4xWu83Gvw/V9FA/DZoetObi2LWqDFi2YGBoQRU8bgGMBP9Pg+3Dk2u8WKthhIkLUaRtRonCzuPSocF1FptRbs5e9d3GHBNFqUNs24AhF7PkHR7gazXK7Kwn1AZ9he1Xjnm2HnHYce9Y5S7E6MXzCD8oUypi7ZfdmHzHfOx8ZzWB/wbeSiTYJXJF2/YIU8xZ/jkTiRCZGrhCs7DpiHomSpMRRUifaJ1rLqRSqmd7Jww5AmUAcEfKKVIJ3r9xa7w+TuUGzU8bhBVFd8QG5SDA0sxHcibpeskupVrBh85R4gIRIy0wBWEUGPlCOirh1VQSijFgEwvoVGv2NWilre1L1DNujAvyJEiR7G5XtCY+i7fhmE7mQAA') format('woff2'),
+  url('iconfont.woff?t=1617947837804') format('woff'),
+  url('iconfont.ttf?t=1617947837804') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+  url('iconfont.svg?t=1617947837804#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-shoucang:before {
+  content: "\e6fb";
+}
+
+.icon-shoucang1:before {
+  content: "\e720";
+}
+

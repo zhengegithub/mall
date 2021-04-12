@@ -18,5 +18,6 @@
 
   .slide img {
     width: 100%;
+    vertical-align: bottom;
   }
 </style>

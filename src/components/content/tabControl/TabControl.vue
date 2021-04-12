@@ -30,6 +30,7 @@ export default {
   methods: {
     tabClick(index) {
       this.activeIndex = index
+      this.$emit('tabClick', index)
     }
   }
 };
@@ -44,13 +45,13 @@ export default {
   position: sticky;
 }
 .tab-control span {
-  font-size: 18px;
+  font-size: 16px;
   padding: 2px;
 }
 .active {
-  color: pink;
+  color: deeppink;
 }
 .active span {
-  border-bottom: 2px solid pink;
+  border-bottom: 2px solid deeppink;
 }
 </style>

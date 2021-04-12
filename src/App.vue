@@ -1,22 +1,24 @@
 <template>
   <div id="app">
-   <main-tab-bar></main-tab-bar>
-   <router-view></router-view>
+    <main-tab-bar></main-tab-bar>
+    <keep-alive>
+      <router-view></router-view>
+    </keep-alive>
   </div>
 </template>
 
 <script>
-import MainTabBar from 'components/content/mainTabbar/MainTabBar'
+import MainTabBar from "components/content/mainTabbar/MainTabBar";
 
 export default {
-  name: 'app',
+  name: "app",
   components: {
-    MainTabBar
-  }
-}
+    MainTabBar,
+  },
+};
 </script>
 
 <style scoped>
-  @import url('~assets/css/reset.css');
-  /* @import url('~assets/css/base.css'); */
+@import url("~assets/css/reset.css");
+/* @import url('~assets/css/base.css'); */
 </style>

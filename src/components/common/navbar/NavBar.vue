@@ -20,7 +20,7 @@ export default {
     height: 44px;
     justify-content: space-between;
     text-align: center;
-    border-bottom: 1px solid rgba(0, 0, 0, .3);
+    box-shadow: 0 0 3px rgb(235, 39, 39);
   }
   .left, .right{
     width: 60px;

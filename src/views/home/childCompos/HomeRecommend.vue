@@ -32,7 +32,9 @@ export default {
 .recommend {
   display: flex;
   background-color: #fff;
-  border-bottom: 1px solid rgba(0, 0, 0, .2);
+  /* border-bottom: 1px solid rgba(0, 0, 0, .2); */
+  box-shadow: 0 0 3px rgb(218, 217, 217);
+ 
 }
 .recommend-item {
   flex: 1;

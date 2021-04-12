@@ -8,15 +8,13 @@
 
 <script>
 export default {
-  props: {
-
-  }
+  
 }
 </script>
 
 <style scoped>
   .feature img{
     width: 100%;
-    vertical-align: bottom;
+    vertical-align:middle;
   }
 </style>

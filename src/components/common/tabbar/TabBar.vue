@@ -18,7 +18,7 @@ export default {
     left: 0;
     right: 0;
     bottom: 0;
-    box-shadow: 0px 0px 3px rgba(0,0,0,.3);
+    box-shadow: 0 0 3px rgb(218, 217, 217);
     display: flex;
     justify-content: space-around;
     height: 49px;

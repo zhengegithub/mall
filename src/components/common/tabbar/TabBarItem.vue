@@ -41,17 +41,12 @@ export default {
 <style scoped>
 @import url('~assets/icon/tabbar/iconfont.css');
   .tab-bar-item {
-    font-size: 12px;
+    font-size: 14px;
     text-align: center;
   }
   .tab-bar-item i{
     display: block;
-    margin: 6px 0 3px;
+    margin: 8px 0 3px;
+    font-weight: 600;
   }
-  /* .tab-bar-item .icon2{
-    color: rgb(250, 169, 182);
-  }  */
-  /* .active{
-    color: rgb(250, 169, 182);
-  } */
 </style>
