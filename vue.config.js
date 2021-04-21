@@ -1,5 +1,6 @@
 module.exports = {
   configureWebpack: {
+    
     resolve: {
       alias: {
         'assets': '@/assets',
@@ -8,7 +9,9 @@ module.exports = {
         'net': '@/net',
         'views': '@/views',
         
-      }
-    }
-  }
+      },
+
+    },
+    
+  },
 }

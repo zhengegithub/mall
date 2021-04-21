@@ -49,11 +49,10 @@ export default {
       this.$emit("isShowPosithon", position);
     });
     this.scroll.on("pullingUp", () => {
-      // console.log("ddddddddddddddddddddddd");
-      this.$emit("loadMore");
+      this.$emit("loadMore");   
+      setTimeout(() => {
         this.scroll.finishPullUp();
-      // setTimeout(() => {
-      // },2000);
+      },100);
     });
     
   },

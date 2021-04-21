@@ -6,7 +6,7 @@
     <tab-control
       :titles="['流行', '新款', '精选']"
       @tabClick="tabClick"
-      ref="tabControl"
+      ref="tabTopControl"
       class="tabHidden"
       :class="{ cTabControl: stopTabControl }"
     />
@@ -96,6 +96,11 @@ export default {
     this.getHomeGoods("pop");
     this.getHomeGoods("new");
     this.getHomeGoods("sell");
+
+    // 运用时间总线监听图片的加载
+    this.$bus.$on('homeGoodsLoad', () => {
+      this.$refs.scroll.scroll.refresh()
+    })
   },
   updated() {
     // 获取TabControl的offsetTop
@@ -120,6 +125,10 @@ export default {
           this.activeType = "sell";
           break;
       }
+      // 让两个tabControl保持一致
+      this.$refs.tabTopControl.activeIndex = index
+      this.$refs.tabControl.activeIndex = index
+
     },
     backClick() {
       // 方法1. 在父组件的template中的子组件上给一个ref,再访问子组件里的scroll,再调用里面的方法
@@ -166,7 +175,7 @@ export default {
   overflow: hidden;
   position: absolute;
   top: 44px;
-  bottom: 49px;
+  bottom: 0;
   left: 0;
   right: 0;
 }

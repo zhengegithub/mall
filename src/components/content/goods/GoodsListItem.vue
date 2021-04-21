@@ -2,7 +2,7 @@
   <div class="goods-list-item" @click="itemClick">
     <div class="goods-wp">
       <div class="img-wp">
-        <img :src="goodsItem.show.img" alt="" />
+        <img :src="showImage" alt="" @load="imgLoad"/>
       </div>
       <div class="title-wp">
         <p>{{ goodsItem.title }}</p>
@@ -28,9 +28,17 @@ export default {
       },
     },
   },
+  computed: {
+    showImage() {
+      return this.goodsItem.image || this.goodsItem.show.img
+    }
+  },
   methods: {
     itemClick() {
       this.$router.push('/detail/' + this.goodsItem.iid)
+    },
+    imgLoad() {
+      this.$bus.$emit('homeGoodsLoad')
     }
   }
 };

@@ -1,8 +1,11 @@
 <template>
-  <h2>购物车</h2>
+  <div class="shopCart">
+
+  </div>
 </template>
 
 <script>
+
 export default {
 
 }
