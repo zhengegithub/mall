@@ -13,11 +13,6 @@
       @isShowPosithon="isShowPosithon"
       ref="scroll"
     >
-      <ul>
-        <li v-for="(item, index) in $store.state.cartList" :key="index">
-          {{item}}
-        </li>
-      </ul>
       <detail-swiper :topImages="topImages" />
       <detail-base-info :goods="goods" />
       <detail-comment-info ref="commend" :commentInfo="commentInfo" />
@@ -32,6 +27,7 @@
       <goods-list ref="recommend" :goods="recommends" />
     </scroll>
     <detail-bottom-bar @addCart="addCart" />
+    <!-- <toast message="hahaha" /> -->
   </div>
 </template>
 
@@ -48,6 +44,7 @@ import DetailParamInfo from "./childCompos/DetailParamInfo";
 import DetailCommentInfo from "./childCompos/DetailCommentInfo";
 import GoodsList from "components/content/goods/GoodsList";
 import DetailBottomBar from "./childCompos/DetailBottomBar";
+// import Toast from 'components/common/toast/Toast'
 
 export default {
   name: "Detail",
@@ -78,6 +75,7 @@ export default {
     DetailCommentInfo,
     GoodsList,
     DetailBottomBar,
+    // Toast
   },
   created() {
     // console.log(this.$route.params)
@@ -111,11 +109,9 @@ export default {
     });
     // 3.请求推荐数据
     getRecommend().then((res) => {
-      console.log(res)
+      // console.log(res)
       this.recommends = res.data.list;
     });
-
-  
   },
   methods: {
     // scrollerOffset() {
@@ -126,16 +122,17 @@ export default {
       // console.log(position);
       this.isShowNavBar = -position.y > 100;
       const positionY = -position.y;
-     
+
       const length = this.themeScrollYs.length;
       for (let i = 0; i < length; i++) {
         if (
-          this.currentIndex !== i && ((i < length - 1 &&
+          this.currentIndex !== i &&
+          ((i < length - 1 &&
             positionY >= this.themeScrollYs[i] &&
             positionY < this.themeScrollYs[i + 1]) ||
-          (i === length - 1 && positionY >= this.themeScrollYs[i]))
+            (i === length - 1 && positionY >= this.themeScrollYs[i]))
         ) {
-          this.$refs.dNav.activeTitle = i
+          this.$refs.dNav.activeTitle = i;
         }
       }
     },
@@ -156,17 +153,21 @@ export default {
     },
     addCart() {
       // 1获取购物车需要展示的信息
-      const product = {}
-      product.image = this.topImages[0]
-      product.title = this.goods.title
-      product.desc = this.goods.desc
-      product.price = this.goods.realPrice
-      product.iid = this.iid
+      const product = {};
+      product.image = this.topImages[0];
+      product.title = this.goods.title;
+      product.desc = this.goods.desc;
+      product.price = this.goods.realPrice;
+      product.iid = this.iid;
 
       // 2.将商品加入到购物车里
       // this.$store.commit('addCart', product)
-      this.$store.dispatch('addCart', product)
-    }
+      this.$store.dispatch("addCart", product).then(res => {
+        // console.log(res);
+        this.$toast.show(res)
+        // console.log(this.$toast);
+      })
+    },
   },
 };
 </script>

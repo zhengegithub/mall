@@ -2,7 +2,7 @@
   <div class="goods-list-item" @click="itemClick">
     <div class="goods-wp">
       <div class="img-wp">
-        <img :src="showImage" alt="" @load="imgLoad"/>
+        <img v-lazy="showImage" alt="" @load="imgLoad"/>
       </div>
       <div class="title-wp">
         <p>{{ goodsItem.title }}</p>

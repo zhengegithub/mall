@@ -20,7 +20,7 @@ export default {
     height: 42px;
     justify-content: space-between;
     text-align: center;
-    box-shadow: 0 0 3px rgb(235, 39, 39);
+    box-shadow: 0 0 3px #3EC0BE;
     
   }
   .left, .right{

@@ -30,18 +30,18 @@ export default {
   },
   data() {
     return {
-      titles: ["商品", "评价","详情","推荐"],
+      titles: ["商品", "评价", "详情", "推荐"],
       activeTitle: 0,
     };
   },
   methods: {
     titleClick(index) {
       this.activeTitle = index;
-      this.$emit('titleClick', index)
+      this.$emit("titleClick", index);
     },
     backClick() {
-      this.$router.back()
-    }
+       this.$router.back()
+    },
   },
 };
 </script>
@@ -61,12 +61,12 @@ export default {
   font-size: 14px;
 }
 .showActiveTitle {
-  color: deeppink;
+  color: #3EC0BE;
 }
 .icon-wp {
   display: inline;
   padding: 4px 7px;
   border-radius: 50%;
-  background-color: rgba(255, 255, 255, .6);
+  background-color: rgba(255, 255, 255, 0.6);
 }
 </style>

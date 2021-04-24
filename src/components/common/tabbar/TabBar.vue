@@ -26,7 +26,7 @@ export default {};
   position: fixed;
   left: 8px;
   right: 0;
-  bottom: 20px;
+  bottom: 38px;
   background-color: #2c313b;
   width: 130px;
   height: 38px;

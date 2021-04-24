@@ -91,7 +91,7 @@ export default {
 }
 
 .bar-right .buy {
-  background-color: #FF4466;
+  background-color: #3EC0BE;
  
 }
 </style>
