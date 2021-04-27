@@ -49,7 +49,7 @@ export default {
 <style scoped>
 @import url("~assets/icon/back/iconfont.css");
 .detail-nav-bar {
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, .9);
   z-index: 999;
   position: relative;
 }

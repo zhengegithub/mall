@@ -10,7 +10,7 @@
         <!-- <span slot="tab-bar-text">首页</span> -->
         
       </tab-bar-item>
-      <tab-bar-item path="/classify" activeColor="#62C4EE">
+      <tab-bar-item path="/category" activeColor="#62C4EE">
         <i class="iconfont icon1" slot="tab-bar-icon">&#xe609;
           <span>|</span>
         </i>

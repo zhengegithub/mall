@@ -1,5 +1,5 @@
 <template>
-  <scroll id="tab-menu">
+  <scroll id="tab-menu" :pullUpLoad="true">
     <div class="menu-list">
       <div class="menu-list-item"
            :class="{active: index===currentIndex}"
@@ -13,7 +13,7 @@
 </template>
 
 <script>
-  import Scroll from 'common/scroll/Scroll'
+  import Scroll from 'components/common/scroll/Scroll'
 
 	export default {
 		name: "TabMenu",
@@ -40,7 +40,7 @@
 <style scoped>
   #tab-menu {
     background-color: #f6f6f6;
-    height: 100%;
+    height: 100vh;
     width: 100px;
     box-sizing: border-box;
   }
@@ -54,8 +54,8 @@
 
   .menu-list-item.active {
     font-weight: 700;
-    color: var(--color-high-text);
+    color: #3ec0be;
     background-color: #fff;
-    border-left: 3px solid var(--color-high-text);
+    border-left: 3px solid #3ec0be;
   }
 </style>

@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
+const Zero = () =>import ('views/zero/Zero.vue')
 const Home = () =>import ('views/home/Home.vue')
 const Category = () =>import ('views/category/Category.vue')
 const ShopCart = () =>import ('views/shopcart/ShopCart.vue')
@@ -10,9 +11,17 @@ const Detail = () =>import ('views/detail/Detail.vue')
 Vue.use(VueRouter)
 
 const routes = [
+  // {
+  //   path: '',
+  //   redirect: '/zero'
+  // },
   {
     path: '',
-    redirect: '/home'
+    redirect: '/zero'
+  },
+  {
+    path: '/zero',
+    component: Zero
   },
   {
     path: '/home',

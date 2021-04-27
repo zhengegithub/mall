@@ -2,8 +2,13 @@
   <div id="home">
     <div class="nav-bar-color">
       <nav-bar>
-        <!-- <img class="zbc" slot="left" src="../../assets/img/theme/theme.png" alt=""> -->
-        <span slot="meddle">购物商城</span>
+        <img
+          class="zbc"
+          slot="left"
+          src="~assets/img/logo/logo4.png"
+          alt=""
+        />
+        <!-- <span slot="meddle">购物商城</span> -->
       </nav-bar>
     </div>
     <tab-control
@@ -22,7 +27,7 @@
       :pullUpLoad="true"
       @loadMore="loadMore"
     >
-      <home-swiper :banners="banners" @homeSwiperLoader="homeSwiperLoader" />
+      <home-swiper :banners="banners" />
       <home-recommend :recommends="recommends" />
       <home-feature />
       <tab-control
@@ -65,24 +70,28 @@ export default {
       isShowBackTop: false,
       banners: [
         {
-          id: '001',
-          imgUrl: require('../../assets/img/banner/banner1.png'),
-          imgLink: 'https://act.mogujie.com/huanxin0001?acm=3.mce.2_10_1jhwa.43542.0.ccy5br4OlfK0Q.pos_0-m_454801-sd_119'
+          id: "001",
+          imgUrl: require("../../assets/img/banner/banner1.png"),
+          imgLink:
+            "https://act.mogujie.com/huanxin0001?acm=3.mce.2_10_1jhwa.43542.0.ccy5br4OlfK0Q.pos_0-m_454801-sd_119",
         },
         {
-          id: '002',
-          imgUrl: require('../../assets/img/banner/banner2.jpg'),
-          imgLink: 'https://act.mogujie.com/ruqiu00001?acm=3.mce.2_10_1ji16.43542.0.ccy5br4OlfK0R.pos_1-m_454889-sd_119'
+          id: "002",
+          imgUrl: require("../../assets/img/banner/banner2.jpg"),
+          imgLink:
+            "https://act.mogujie.com/ruqiu00001?acm=3.mce.2_10_1ji16.43542.0.ccy5br4OlfK0R.pos_1-m_454889-sd_119",
         },
         {
-          id: '003',
-          imgUrl: require('../../assets/img/banner/banner3.jpg'),
-          imgLink: 'https://act.mogujie.com/huanji001?acm=3.mce.2_10_1jfj8.43542.0.ccy5br4OlfK0S.pos_2-m_453270-sd_119'
+          id: "003",
+          imgUrl: require("../../assets/img/banner/banner3.jpg"),
+          imgLink:
+            "https://act.mogujie.com/huanji001?acm=3.mce.2_10_1jfj8.43542.0.ccy5br4OlfK0S.pos_2-m_453270-sd_119",
         },
         {
-          id: '004',
-          imgUrl: require('../../assets/img/banner/banner4.jpg'),
-          imgLink: 'https://act.mogujie.com/liuxing00001?acm=3.mce.2_10_1jepe.43542.0.ccy5br4OlfK0T.pos_3-m_452733-sd_119'
+          id: "004",
+          imgUrl: require("../../assets/img/banner/banner4.jpg"),
+          imgLink:
+            "https://act.mogujie.com/liuxing00001?acm=3.mce.2_10_1jepe.43542.0.ccy5br4OlfK0T.pos_3-m_452733-sd_119",
         },
       ],
       recommends: [],
@@ -123,10 +132,10 @@ export default {
     this.getHomeGoods("sell");
 
     // 运用事件总线监听图片的加载
-    this.$bus.$on('homeGoodsLoad', () => {
-      this.$refs.scroll.scroll.refresh()
+    this.$bus.$on("homeGoodsLoad", () => {
+      this.$refs.scroll.scroll.refresh();
       // console.log(11111111133333);
-    })
+    });
   },
   methods: {
     // 事件区
@@ -153,6 +162,7 @@ export default {
       this.$refs.scroll.backTop(0, 0);
     },
     isShowPosithon(position) {
+      // console.log(position);
       this.isShowBackTop = -position.y > 1200;
       this.stopTabControl = -position.y > this.tabOffsetTop;
     },
@@ -181,17 +191,19 @@ export default {
         this.goods[type].page += 1;
       });
     },
-    homeSwiperLoader() {
-      // console.log(13133131);
+  },
+  updated() {
+    setTimeout(() => {
       this.tabOffsetTop = this.$refs.tabControl.$el.offsetTop;
-    },
+    }, 100);
   },
 };
 </script>
 
 <style scoped>
 .zbc {
-  width: 100%;
+  width: 250%;
+  margin-top: 8px;
 }
 .wrapper {
   /* calc计算值 */
@@ -211,7 +223,7 @@ export default {
 .nav-bar-color {
   background-color: #3ec0be;
   color: #fff;
-
+  /* font-size: 12px; */
   /* position: fixed;
   z-index: 999;
   left: 0;
