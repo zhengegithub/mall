@@ -1,10 +1,7 @@
 <template>
   <swiper :options="swiperOptions">
-    <swiper-slide class="img-wp" v-for="item in topImages" :key="item">
-      <img :src="item" alt="" />
-    </swiper-slide>
+    <slot></slot>
     <div class="swiper-pagination" slot="pagination"></div>
-    
   </swiper>
 </template>
 
@@ -13,26 +10,17 @@
 // import "swiper/swiper-bundle.css";
 export default {
   name: "MySwiper",
-  components: {},
-  props: {
-    topImages: {
-      type: Array,
-      default() {
-        return [];
-      },
-    },
-  },
   data() {
     return {
       swiperOptions: {
         pagination: ".swiper-pagination",
         // loop: true,
-        // autoplay: 2500,
+        autoplay: 2500,
         touchRatio: 2,
         longSwipesRatio: 0.25,
-        effect: "coverflow"
+        effect: "coverflow",
         // 用户操作之后是否禁用自动播放
-        // autoplayDisableOnInteraction: false,
+        autoplayDisableOnInteraction: false,
       },
     };
   },
@@ -40,8 +28,5 @@ export default {
 </script>
 
 <style>
-.img-wp img {
-  width: 100%;
-}
 
 </style>

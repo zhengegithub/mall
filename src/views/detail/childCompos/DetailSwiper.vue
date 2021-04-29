@@ -1,5 +1,9 @@
 <template>
-  <my-swiper class="swiper-item" :topImages="topImages"> </my-swiper>
+  <my-swiper class="swiper-item">
+    <swiper-slide class="img-wp" v-for="item in topImages" :key="item">
+      <img :src="item" alt="" />
+    </swiper-slide>
+  </my-swiper>
 </template>
 <script>
 import MySwiper from "components/common/myswiper/MySwiper";
@@ -9,9 +13,7 @@ export default {
   props: {
     topImages: {
       type: Array,
-      default() {
-        return [];
-      },
+      default: []
     },
   },
   components: {
@@ -24,5 +26,8 @@ export default {
 .swiper-item {
   height: 300px;
   overflow: hidden;
+}
+.img-wp img {
+  width: 100%;
 }
 </style>

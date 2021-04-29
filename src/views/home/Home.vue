@@ -27,7 +27,7 @@
       :pullUpLoad="true"
       @loadMore="loadMore"
     >
-      <home-swiper :banners="banners" />
+      <home-my-swiper />
       <home-recommend :recommends="recommends" />
       <home-feature />
       <tab-control
@@ -48,7 +48,7 @@ import TabControl from "components/content/tabControl/TabControl";
 import GoodsList from "components/content/goods/GoodsList";
 import BackTop from "components/common/backtop/BackTop";
 // 导入的Home的子组件
-import HomeSwiper from "./childCompos/HomeSwiper";
+import HomeMySwiper from './childCompos/HomeMySwiper'
 import HomeRecommend from "./childCompos/HomeRecommend";
 import HomeFeature from "./childCompos/HomeFeature";
 
@@ -57,7 +57,7 @@ import Scroll from "components/common/scroll/Scroll";
 export default {
   components: {
     NavBar,
-    HomeSwiper,
+    HomeMySwiper,
     HomeRecommend,
     HomeFeature,
     TabControl,
@@ -68,32 +68,7 @@ export default {
   data() {
     return {
       isShowBackTop: false,
-      banners: [
-        {
-          id: "001",
-          imgUrl: require("../../assets/img/banner/banner1.png"),
-          imgLink:
-            "https://act.mogujie.com/huanxin0001?acm=3.mce.2_10_1jhwa.43542.0.ccy5br4OlfK0Q.pos_0-m_454801-sd_119",
-        },
-        {
-          id: "002",
-          imgUrl: require("../../assets/img/banner/banner2.jpg"),
-          imgLink:
-            "https://act.mogujie.com/ruqiu00001?acm=3.mce.2_10_1ji16.43542.0.ccy5br4OlfK0R.pos_1-m_454889-sd_119",
-        },
-        {
-          id: "003",
-          imgUrl: require("../../assets/img/banner/banner3.jpg"),
-          imgLink:
-            "https://act.mogujie.com/huanji001?acm=3.mce.2_10_1jfj8.43542.0.ccy5br4OlfK0S.pos_2-m_453270-sd_119",
-        },
-        {
-          id: "004",
-          imgUrl: require("../../assets/img/banner/banner4.jpg"),
-          imgLink:
-            "https://act.mogujie.com/liuxing00001?acm=3.mce.2_10_1jepe.43542.0.ccy5br4OlfK0T.pos_3-m_452733-sd_119",
-        },
-      ],
+      // banners: [],
       recommends: [],
       goods: {
         pop: { page: 1, list: [] },
