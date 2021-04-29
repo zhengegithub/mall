@@ -1,23 +1,24 @@
 <template>
   <div class="detail-nav-bar">
     <nav-bar>
-      <div slot="left">
+      <template v-slot:left>
         <div class="icon-wp" @click="backClick">
           <i class="iconfont">&#xe604;</i>
         </div>
-      </div>
-      <div slot="meddle" class="meddle-title-wp">
-        <div
-          v-for="(item, index) in titles"
-          :key="index"
-          class="meddle-title"
-          :class="{ showActiveTitle: index === activeTitle }"
-          @click="titleClick(index)"
-        >
-          {{ item }}
+      </template>
+      <template v-slot:meddle>
+        <div class="meddle-title-wp">
+          <div
+            v-for="(item, index) in titles"
+            :key="index"
+            class="meddle-title"
+            :class="{ showActiveTitle: index === activeTitle }"
+            @click="titleClick(index)"
+          >
+            {{ item }}
+          </div>
         </div>
-      </div>
-      <div slot="right"></div>
+      </template>
     </nav-bar>
   </div>
 </template>
@@ -40,7 +41,7 @@ export default {
       this.$emit("titleClick", index);
     },
     backClick() {
-       this.$router.back()
+      this.$router.back();
     },
   },
 };
@@ -49,7 +50,7 @@ export default {
 <style scoped>
 @import url("~assets/icon/back/iconfont.css");
 .detail-nav-bar {
-  background-color: rgba(255, 255, 255, .9);
+  background-color: rgba(255, 255, 255, 0.9);
   z-index: 999;
   position: relative;
 }
@@ -61,7 +62,7 @@ export default {
   font-size: 14px;
 }
 .showActiveTitle {
-  color: #3EC0BE;
+  color: #3ec0be;
 }
 .icon-wp {
   display: inline;

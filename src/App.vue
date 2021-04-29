@@ -1,9 +1,10 @@
 <template>
   <div id="app">
-    <keep-alive exclude="Detail">
+    <main-tab-bar />
+    <!-- <keep-alive exclude="Detail">
       <router-view></router-view>
-    </keep-alive>
-    <main-tab-bar></main-tab-bar>
+    </keep-alive> -->
+    <router-view />
   </div>
 </template>
 
@@ -20,5 +21,6 @@ export default {
 
 <style scoped>
 @import url("~assets/css/reset.css");
+* { touch-action: pan-y; }
 /* @import url('~assets/css/base.css'); */
 </style>

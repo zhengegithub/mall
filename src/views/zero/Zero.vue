@@ -137,7 +137,9 @@ export default {
 <style scoped>
 .zero {
   height: 100vh;
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: #fff;
+  position: relative;
+  z-index: 999;
 }
 .zero img {
   width: 80%;

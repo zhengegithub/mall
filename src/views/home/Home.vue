@@ -2,12 +2,13 @@
   <div id="home">
     <div class="nav-bar-color">
       <nav-bar>
-        <img
-          class="zbc"
-          slot="left"
-          src="~assets/img/logo/logo4.png"
-          alt=""
-        />
+        <template v-slot:left>
+          <img
+            class="zbc"
+            src="~assets/img/logo/logo4.png"
+            alt=""
+          />
+        </template>
         <!-- <span slot="meddle">购物商城</span> -->
       </nav-bar>
     </div>
@@ -48,7 +49,7 @@ import TabControl from "components/content/tabControl/TabControl";
 import GoodsList from "components/content/goods/GoodsList";
 import BackTop from "components/common/backtop/BackTop";
 // 导入的Home的子组件
-import HomeMySwiper from './childCompos/HomeMySwiper'
+import HomeMySwiper from "./childCompos/HomeMySwiper";
 import HomeRecommend from "./childCompos/HomeRecommend";
 import HomeFeature from "./childCompos/HomeFeature";
 
@@ -106,11 +107,11 @@ export default {
     this.getHomeGoods("new");
     this.getHomeGoods("sell");
 
-    // 运用事件总线监听图片的加载
-    this.$bus.$on("homeGoodsLoad", () => {
-      this.$refs.scroll.scroll.refresh();
-      // console.log(11111111133333);
-    });
+    // // 运用事件总线监听图片的加载
+    // this.$bus.$on("homeGoodsLoad", () => {
+    //   this.$refs.scroll.scroll.refresh();
+    //   // console.log(11111111133333);
+    // });
   },
   methods: {
     // 事件区
